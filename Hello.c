@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main(int argc, char const *argv[])
 {
-    printf("This is Github Example.");
-    int a = 10;
-    printf("%d",a+10);
-    int b = 20;
-    printf("%d",a+b);
+    int n;
+    scanf("%d",&n);
+    for(int i = 1;i<=10;i++){
+        printf("%d * %d = %d",n,i,n*i);
+    }
     return 0;
 }
