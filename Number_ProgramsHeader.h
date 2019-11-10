@@ -15,6 +15,8 @@ int deficient_number; //Global Variable for Checking if a number is a Deficient 
 
 int twisted_Prime_Number; //Global Variable for Checking if a number is a Twisted Prime Number or not.
 
+char number_string[1000];//Global Variable for To Find Sum of digits without using Modulus Operator.
+
 void Check_Disarium_Number()
 {
     int count = 0, counter, rem, final_result = 0;
@@ -175,4 +177,14 @@ if(result == rev_result){
 
 }
 //END of Function TPN.
+
+void Sum_All_Digits(){
+int sum = 0,temp,count = 0;
+while(number_string[count]!='\0'){
+    temp = number_string[count] - '0';
+    sum += temp;
+    count++;
+}
+printf("Sum of %s is %d",number_string,sum);
+}
 #undef Power
