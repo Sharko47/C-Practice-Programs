@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <math.h>
-
+#include<stdbool.h>
 #define Power(num) (int)powf(num, 2)
 
 int disarium_number; //Global Variable for Checking if a number is Disarium Number of not.
@@ -12,6 +12,8 @@ int happy_number; //Global Variable for Checking if a number is a Happy Number o
 int pronic_range; //Global Variable for Printing 1 To N Pronic Numbers.
 
 int deficient_number; //Global Variable for Checking if a number is a Deficient number or not.
+
+int twisted_Prime_Number; //Global Variable for Checking if a number is a Twisted Prime Number or not.
 
 void Check_Disarium_Number()
 {
@@ -114,12 +116,63 @@ void Print_Pronic_Numbers()
 void Check_Deficient_Number()
 {
     register int i = 1;
-    int divisor, sum = 0, deficient_copy;
-    deficient_copy = deficient_number;
+    int divisor, sum = 0;
     for (; i <=deficient_number; i++)
     {
-        divisor = deficient_copy;
-        deficient_number = 10;
+        divisor = deficient_number%i;
+        if(divisor==0){
+            sum += i;
+        }
+    }
+    if(sum<deficient_number*2){
+        printf("%d is a Deficient Number\n",deficient_number);
+    }else
+    {
+        printf("%d is not a Deficient Number\n",deficient_number);
     }
 }
+//Start of the function for finding Twisted Prime Number.
+bool IsPrime(int n){
+    int divisor,temp=0;
+    for(int i = 1;i<=n;i++){
+        divisor = n%i;
+        if(divisor==0){
+            temp += i;
+        }
+    }
+    if((n+1)==temp){
+        return true;
+    }
+    return false;
+}
+
+int Reverse_Number(int n){
+int reverse=0,remain;
+while(n>0){
+remain = n%10;
+reverse = reverse * 10 + remain;
+n = n/10;
+}
+return reverse;
+}
+
+void Check_Twisted_Prime_Number(){
+int result=0,rev_result=0;
+if(IsPrime(twisted_Prime_Number)){
+    result = 1;
+}
+int rev = Reverse_Number(twisted_Prime_Number);
+printf("Reverse of %d is %d\n",twisted_Prime_Number,rev);
+if(IsPrime(rev)){
+    rev_result = 1;
+}
+if(result == rev_result){
+    printf("%d is a Twisted Prime Number\n",twisted_Prime_Number);
+}else
+{
+    printf("%d is not a Twisted Prime Number\n",twisted_Prime_Number);
+}
+
+}
+//END of Function TPN.
 #undef Power

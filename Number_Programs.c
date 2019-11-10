@@ -7,6 +7,7 @@ int main(int argc, char const *argv[])
     int choice;
     printf("Choose Any One:\n1.Program to find a length of a Number.\n2.Program to find a number is a Disarium number of not.\n");
     printf("3.Program to Check Happy Number.\n4.Program to print all Pronic numbers between 1 To N.\n5.Program to Check Deficient Number.\n");
+    printf("6.Program to Check Twisted Prime Number.\n");
     printf("Choice->\t");
     scanf("%d", &choice);
     if (choice <= 0)
@@ -62,6 +63,14 @@ int main(int argc, char const *argv[])
         scanf("%d", &deficient_number);
         Check_Deficient_Number(deficient_number);
     }
-
+    else if (choice == 6)
+    {
+        printf("\t\t\tYour Choice was:5.Program to Check Twisted Prime Number.\n");
+        extern int twisted_Prime_Number;
+        printf("Enter the Number:\t");
+        scanf("%d",&twisted_Prime_Number);
+        Check_Twisted_Prime_Number(twisted_Prime_Number);
+    }
+    
     return 0;
 }
