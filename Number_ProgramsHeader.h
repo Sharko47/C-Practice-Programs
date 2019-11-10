@@ -115,10 +115,10 @@ void Check_Deficient_Number()
 {
     register int i = 1;
     int divisor, sum = 0, deficient_copy;
-    deficient_copy = deficient_copy;
+    deficient_copy = deficient_number;
     for (; i < deficient_number; i++)
     {
-        
+
     }
 }
 #undef Power
