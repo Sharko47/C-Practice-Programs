@@ -1,2 +1,2 @@
 # C-Practice-Programs
-Multiple Solved Programs in a Single Place.
+Multiple Solved C Programs in a Single Place.

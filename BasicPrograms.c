@@ -21,7 +21,7 @@ int Withoutmain
         extern double length,breadth;
         printf("Enter Length & Breadth of a Rectangle:\t");
         scanf("%lf %lf",&length,&breadth);
-    Calculate_Rectangle_Area(length,breadth);
+        Calculate_Rectangle_Area(length,breadth);
     }else if (choice == 2)
     {
         /* code */
