@@ -21,4 +21,3 @@ void denom(int *s,int *n,int c){
 *n += ((*s)/c);//Calculating Number of Notes.
 *s %= c;//Assigning new remaining SUM.
 }
-
