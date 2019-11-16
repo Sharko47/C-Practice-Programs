@@ -83,6 +83,5 @@ int main(int argc, char const *argv[])
     {
         printf("Please enter choice in a specified range.\n");
     }
-    
     return 0;
 }

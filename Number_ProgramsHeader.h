@@ -119,14 +119,14 @@ void Check_Deficient_Number()
 {
     register int i = 1;
     int divisor, sum = 0;
-    for (; i <=deficient_number; i++)
+    for (; i <=deficient_number/2; i++)
     {
         divisor = deficient_number%i;
         if(divisor==0){
             sum += i;
         }
     }
-    if(sum<deficient_number*2){
+    if(sum<deficient_number){
         printf("%d is a Deficient Number\n",deficient_number);
     }else
     {
