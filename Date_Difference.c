@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<math.h>
 int days_in_months_fun(int,int);
 int main(int argc, char const *argv[])
 {
@@ -13,10 +12,15 @@ int main(int argc, char const *argv[])
     if(months == months2 && days == days2 && years == years2){
         printf("Both are Same Date!!\n");
         exit(0);
+    }else if(days > 31 || days2 > 31){
+        printf("Invalid Dates!!\n");
+        exit(0);
     }
     difference_years = years2 - years;
     days_in_months = days_in_months_fun(months,years);
     while(1){
+        difference_days = difference_days + 1;
+        days = days + 1;
         if(days>days_in_months){
             months = months + 1;
             days = 1;
@@ -26,16 +30,14 @@ int main(int argc, char const *argv[])
             }
             days_in_months = days_in_months_fun(months,years);
         }
-        if((days == days2) && (months == months2)){
+        if((days == days2) && (months == months2) && (years == years2)){
             break;
         }
-        difference_days = difference_days + 1;
-        days = days + 1;
     }
     difference_weeks = difference_days/7;
     printf("Difference in Days = %d\n",difference_days);
     printf("Difference in Weeks = %d\n",difference_weeks);
-    printf("Difference in Years = %d\n",abs(difference_years));
+    printf("Difference in Years = %d\n",difference_years);
     return 0;
 }
 int days_in_months_fun(int months,int years){
