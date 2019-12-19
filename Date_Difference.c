@@ -19,9 +19,8 @@ int main(int argc, char const *argv[])
     difference_years = years2 - years;
     days_in_months = days_in_months_fun(months,years);
     while(1){
-        difference_days = difference_days + 1;
-        days = days + 1;
-        if(days>days_in_months){
+        
+        if(days>=days_in_months){
             months = months + 1;
             days = 1;
             if(months>12){
@@ -33,6 +32,8 @@ int main(int argc, char const *argv[])
         if((days == days2) && (months == months2) && (years == years2)){
             break;
         }
+        difference_days = difference_days + 1;
+        days = days + 1;
     }
     difference_weeks = difference_days/7;
     printf("Difference in Days = %d\n",difference_days);
