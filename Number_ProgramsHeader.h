@@ -15,7 +15,9 @@ int deficient_number; //Global Variable for Checking if a number is a Deficient 
 
 int twisted_Prime_Number; //Global Variable for Checking if a number is a Twisted Prime Number or not.
 
-char number_string[1000];//Global Variable for To Find Sum of digits without using Modulus Operator.
+char number_string[100];//Global Variable for To Find Sum of digits without using Modulus Operator.
+
+int C_P_num,r;//Global Variable for Permutation and Combination of a given number.
 
 void Check_Disarium_Number()
 {
@@ -186,5 +188,25 @@ while(number_string[count]!='\0'){
     count++;
 }
 printf("Sum of %s is %d",number_string,sum);
+}
+int factorial(int n){
+    int fact = n,i;
+    if(n == 1){
+        return n;
+    }else
+    {
+        for(i = n-1;i>=1;--i){
+            fact = fact * i;
+        }
+    }
+    return fact;
+}
+void Permutation_Combination(){
+    int nPr,nCr,temp_num;
+    nCr = factorial(C_P_num) / (factorial(r) * factorial(C_P_num - r));
+    temp_num = C_P_num - r;
+    nPr = factorial(C_P_num)/ factorial(temp_num);
+    printf("Permutation of %d & %d = %d\n",C_P_num,r,nPr);
+    printf("Combination of %d & %d = %d\n",C_P_num,r,nCr);
 }
 #undef Power

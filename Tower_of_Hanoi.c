@@ -7,12 +7,15 @@ int main(int argc, char const *argv[])
     return 0;
 }
 int Hanoi(int n,char source,char Aux,char Dest){
+    static int i = 1;
 if(n == 1){
-    printf("Move from %c to %c\n",source,Dest);
+    printf("%d:-> Move from %c to %c\n",i,source,Dest);
+    i++;
 }else
 {
     Hanoi(n-1,source,Dest,Aux);
-    printf("HMove from %c to %c\n",source,Dest);
+    printf("%d:-> Else-Move from %c to %c\n",i,source,Dest);
+    i++;
     Hanoi(n-1,Aux,source,Dest);
 }
 return 0;

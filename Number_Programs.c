@@ -7,7 +7,8 @@ int main(int argc, char const *argv[])
     int choice;
     printf("Choose Any One:\n1.Program to find a length of a Number.\n2.Program to find a number is a Disarium number of not.\n");
     printf("3.Program to Check Happy Number.\n4.Program to print all Pronic numbers between 1 To N.\n5.Program to Check Deficient Number.\n");
-    printf("6.Program to Check Twisted Prime Number.\n7.Program to find sum of all digits without using Modulus operator.\n");
+    printf("6.Program to Check Twisted Prime Number.\n7.Program to Find sum of all digits without using Modulus operator.\n");
+    printf("8.Program to Find Permutation and Combination of a Given Number\n");
     printf("Choice->\t");
     scanf("%d", &choice);
     if (choice <= 0)
@@ -74,12 +75,20 @@ int main(int argc, char const *argv[])
     else if (choice == 7)
     {
         printf("\t\t\tYour Choice was:7.Program to find sum of all digits without using Modulus operator.\n");
-        extern char number_string[1000];
+        extern char number_string[100];
         printf("Enter the Number:\t");
         scanf("%s",number_string);
         Sum_All_Digits(number_string);
     }
-    else if (choice >7)
+    else if (choice == 8)
+    {
+        printf("\t\t\tYour Choice was:8.Program to Find Permutation and Combination of a Given Number\n");
+        extern int C_P_num,r;
+        printf("Enter the Number:\t");
+        scanf("%d %d",&C_P_num,&r);
+        Permutation_Combination(C_P_num,r);
+    }
+    else if (choice >8)
     {
         printf("Please enter choice in a specified range.\n");
     }

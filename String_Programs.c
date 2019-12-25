@@ -5,22 +5,28 @@
 int String_Func
 {
     int choice;
-    printf("1.Program to find the Length of a String without using any Function\n");
+    printf("1.Program to find the Length of a String without using any Function\n2.Program To Find If Two String are Anagram\n");
     printf("Choice-->\t");
     scanf("%d", &choice);
+    fflush(stdin);
     switch (choice)
     {
     case 1:
         printf("\t\t\tYour choice was-> 1.Program to find the Length of a String without using any Function\n");
         extern char string_len[500];
         printf("Enter the String:\t");
-        fflush(stdin);
-        gets(string_len);
+        fgets(string_len,500,stdin);
         StringLength(string_len);
         break;
     case 2:
+        printf("\t\t\tYour choice was-> 2.Program To Find If Two String are Anagram\n");
+        extern char string_perm[100],start,end;
+        printf("Enter the Strings:\t");
+        fgets(string_perm,100,stdin);
+        start = 0;
+        end = strlen(string_perm);
+        Find_String_Permutation(string_perm,start,end-1);
         break;
-
     default:
         break;
     }

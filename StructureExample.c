@@ -14,8 +14,8 @@ struct employes
 };
 
 void displayInfo(struct employes empInfo[]){
-int i;
-   for(i = 0;i<3;++i){
+int i = 0;
+   for(;i<3;++i){
        printf("ID: %d\n",empInfo[i].id);
        printf("Name: %s\n",empInfo[i].name);
        printf("Salary: %f\n",empInfo[i].salary);
@@ -31,9 +31,9 @@ int main(){
    for(;i<3;++i){
        printf("Enter the ID of an Employee\n");
        scanf("%d",&emp[i].id);
-    printf("Enter the Name of an Employee\n");
+       printf("Enter the Name of an Employee\n");
        scanf("%s",&emp[i].name);
-    printf("Enter the Salary of an Employee\n");
+       printf("Enter the Salary of an Employee\n");
        scanf("%f",&emp[i].salary);
        printf("Enter the City of an Employee\n");
        scanf("%s",&emp[i].add.city);
