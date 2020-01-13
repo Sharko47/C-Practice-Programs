@@ -2,6 +2,7 @@
 int main(int argc, char const *argv[])
 {
     //Input = ab231156
+    //Program to Find occurence of a number from 0 to 9 and Sum all the number in a String.
     char str[50];
     int i = 0;
     static int occurence_counter[10],sum_of_number_string;
@@ -49,6 +50,6 @@ int main(int argc, char const *argv[])
     for(i = 0;i<10;i++){
         printf("Occurence of '%d' : %d\n",i,*(occurence_counter+i));
         }
-        printf("\nSum of number in a String: %d",sum_of_number_string);
+        printf("Sum of number in a String: %d",sum_of_number_string);
     return 0;
 }
