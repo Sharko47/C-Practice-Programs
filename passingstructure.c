@@ -23,6 +23,7 @@ void show4(int *roll,char *name){
 
 struct student *getAdd(struct student *receivedStruct){
 receivedStruct->roll = receivedStruct->roll + 5;
+(*receivedStruct).roll = (*receivedStruct).roll + 10;//Another way of acessing pointer to structure data members.
 return receivedStruct;
 }
 
